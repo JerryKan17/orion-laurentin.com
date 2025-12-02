@@ -1,0 +1,18 @@
+.footer-container{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  inset: auto 0 0 0;
+  padding-top: 15px;
+  z-index: 1000;
+
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.479));
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+.footer-container p {
+  font-size: 16px;
+  padding-bottom: -2px;
+  user-select: none;
+ 
+}

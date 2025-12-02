@@ -1,0 +1,120 @@
+.contact-container {
+  position: relative;
+  width: 100%;
+  min-height: 55vh; /* Prend une bonne partie de l'écran */
+  background-color: var(--background-color);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  overflow: hidden;
+}
+
+/* --- L'IMAGE DE FOND --- */
+.contact-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.contact-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/*Voile noir semi-transparent pour lisibilité */
+.contact-background .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* 40% d'opacité noire */
+}
+
+/* --- LE CONTENU --- */
+.contact-content {
+  position: relative;
+  z-index: 1; /* Par dessus l'image */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Titre Contact Me */
+.contact-content .text-title {
+  font-size: 80px; 
+  margin: 0;
+  color: white;
+}
+
+/* Email */
+.contact-email {
+  font-family: "eb-garamond", serif, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.2s ease;
+}
+
+.contact-email:hover {
+  color: var(--secondary-color); /* Jaune au survol */
+}
+
+/* --- LISTE DES ICONES (Flexbox magique) --- */
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* VERSION DESKTOP & TABLETTE par défaut : Ligne */
+  flex-direction: row; 
+  gap: 40px; /* Espace horizontal entre les icônes */
+}
+
+/* Style des SVGs */
+.social-icon svg {
+  width: 45px;
+  height: 45px;
+  fill: white;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+/* Hover sur les icônes */
+.social-icon:hover svg {
+  fill: var(--secondary-color); /* Jaune */
+  transform: scale(1.1); /* Petit zoom */
+}
+
+/* --- MOBILE ONLY (< 768px) --- */
+@media (max-width: 768px) {
+  
+  .contact-container {
+    min-height: 90vh; /* Plus grand sur mobile pour l'effet immersif */
+  }
+
+  .contact-content .text-title {
+    font-size: 60px; /* Un peu plus petit sur mobile */
+  }
+
+  .social-list {
+    /* VERSION MOBILE : Colonne */
+    flex-direction: column;
+    gap: 35px; /* Espace vertical entre les icônes */
+    margin-top: 20px;
+  }
+  
+  /* Optionnel : icônes un peu plus grosses sur mobile pour le doigt */
+  .social-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+}

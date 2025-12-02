@@ -1,0 +1,64 @@
+
+/*main color variable*/
+:root {
+  --main-color: rgb(255, 255, 255);
+  --background-color: rgb(4, 0, 35); 
+  --secondary-color: rgb(255, 249, 81);
+  --active-color: rgb(255, 29, 240);
+
+  --header-height: 100px;
+}
+
+
+body{
+  background-color: var(--background-color) ;
+  z-index: 0;
+}
+
+
+p, button, nav ul li a, footer {
+  font-family: "eb-garamond", serif, 'Times New Roman', Times, serif;
+  font-size: 24px; 
+  font-weight: 400;
+  font-style: normal;;
+  color: white;
+}
+
+/*base button style*/
+button{
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px 15px 10px 15px;
+
+  font-family: effra-cc, sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+
+  transition: all 150ms;
+}
+
+button:hover{
+  background-color: var(--secondary-color);
+  color: black;
+
+}
+
+.text-title{
+  font-family: effra-cc, sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 182px;
+  margin: 0;
+  text-align: center;
+}
+
+.no-select {
+  user-select: none;           /* Standard – fonctionne partout aujourd’hui */
+  -webkit-user-select: none;   /* Safari / iOS */
+  -moz-user-select: none;      /* Firefox ancien */
+  -ms-user-select: none;       /* IE10+ / Edge ancien */
+}

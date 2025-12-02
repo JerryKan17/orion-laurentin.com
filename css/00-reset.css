@@ -1,0 +1,32 @@
+/* Rend le dimensionnement des éléments plus prévisible et facile à calculer */
+*, *::before, *::after {
+    /* box-sizing: border-box garantit que le padding et la bordure 
+       sont inclus DANS la largeur/hauteur de l'élément, et non ajoutés. */
+    box-sizing: border-box;
+}
+
+/* Supprime les marges et paddings sur les éléments principaux */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Réinitialise les listes pour une utilisation facile en navigation */
+ul, ol {
+    list-style: none; /* Supprime les puces/numéros par défaut */
+}
+
+/* Rend les images réactives (elles ne dépasseront jamais la taille de leur conteneur) */
+img, picture {
+    max-width: 100%;
+    display: block; /* Élimine les espaces blancs indésirables sous les images */
+}
+
+/* Assure que la hauteur des lignes est bien définie (pour des raisons d'accessibilité) */
+body {
+    min-height: 100vh; /* Garantit que le corps occupe au moins 100% de la hauteur de la fenêtre */
+    text-rendering: optimizeSpeed;
+    line-height: 1.5; /* Une hauteur de ligne standard pour la lisibilité */
+    /*padding-bottom: 5000px;*/
+}

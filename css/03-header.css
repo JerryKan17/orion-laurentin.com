@@ -1,0 +1,153 @@
+
+
+/*BASE menu header*/
+.header-container{
+  position: fixed;
+  inset: 0 0 auto 0 ;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: var(--header-height);
+  background-image: linear-gradient(rgb(4, 2, 36), rgba(0, 0, 45, 0));
+  transition: 0.3s;
+}
+
+.orion-logo{
+  margin-left: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/*invisible under 768px*/
+.hamburger-btn, .cross-btn{
+  cursor: pointer;
+  display: none;
+  margin-right: 25px;
+}
+
+.main-menu-list{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-right: 50px;
+}
+
+/*nav desktop styling*/
+nav ul li a {
+    margin-left: 15px;
+    text-decoration: none;     
+    color: var(--main-color);
+    transition: color 0.2s ease-in; 
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color); 
+}
+
+nav ul li a:active {
+  transition: color 0s; 
+  color: var(--active-color) 
+}
+
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+
+  /* 1. Cacher la navigation Desktop par défaut */
+  .menu-overlay {
+    
+    display: flex; 
+    
+    /* On le cache visuellement et logiquement */
+    opacity: 0;             
+    visibility: hidden;     /* Désactive les clics quand le menu est fermé */
+    
+  
+    transition: opacity 0.2s ease-in-out, visibility 0.2s;
+
+    /* Le reste de vos propriétés de positionnement */
+    position: fixed;
+    inset: 0;
+    width: 100%;  /* Préférez % à vw pour éviter le scroll horizontal */
+    height: 100vh;
+    background-color: var(--background-color);
+    z-index: 2000;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 2. État "ACTIF" : Quand on ajoute la classe via JS, le menu s'affiche */
+  .menu-overlay.is-open {
+    opacity: 1;             /* Totalement opaque */
+    visibility: visible;    /* Réactive les clics */
+}
+
+  /* 3. Style de la liste pour l'espacement */
+  .main-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: center;
+    gap: 30px; 
+    width: 100%;
+    padding-left: 8%;
+  }
+
+  /* 4. Typographie des liens Mobile (Jaune et plus grand) */
+  .main-menu-list li a {
+    font-family: "eb-garamond", serif, 'Times New Roman', Times, serif;
+    font-size: 42px; /* Taille importante pour le mobile */
+    color: var(--main-color); /* Ton jaune */
+    margin: 0;
+  }
+
+  /* 5. Logo spécifique au menu mobile */
+  .mobile-logo-container {
+    margin-bottom: 60px; /* Espace sous le logo */
+  }
+  .mobile-logo {
+    width: 250px; /* Ajuste selon la taille voulue */
+    height: auto;
+    justify-content: center;
+  }
+
+  /* 6. Positionnement de la croix (Absolu en haut à droite) */
+  .cross-btn {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  /* 7. Affichage du bouton Hamburger */
+  .hamburger-btn {
+    display: block;
+    cursor: pointer;
+    z-index: 2001; /* Juste au cas où */
+  }
+
+  /* Cacher le logo original du header quand le menu est ouvert (Optionnel, pour faire propre) */
+  body.no-scroll .orion-logo {
+    opacity: 0; 
+  }
+}
+
+  /* Cache le logo mobile sur la version Desktop */
+@media (min-width: 769px) {
+  .mobile-logo-container, .cross-btn {
+    display: none;
+  }
+}
+
+/*JS SCRIPTS*/
+
+.js-hidden-header{
+  top: -200px;
+}

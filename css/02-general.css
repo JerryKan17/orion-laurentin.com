@@ -1,0 +1,55 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- BOUTON RETOUR EN HAUT (BACK TO TOP) --- */
+
+.back-to-top-btn {
+  /* Position fixe sur la page */
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  
+  /* Style visuel */
+  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre semi-transparent */
+  border-radius: 25px;
+  padding: 10px;
+  z-index: 900; /* Assure qu'il est au-dessus de tout sauf du header/menu */
+  
+  /* État initial : caché */
+  opacity: 0;
+  visibility: hidden;
+  
+  /* Transition pour l'apparition douce */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.2s;
+  
+  /* Empêche la sélection de l'icône */
+  text-decoration: none;
+}
+
+/* État Actif (visible via JS) */
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Effet de survol */
+.back-to-top-btn:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.back-to-top-btn:hover svg {
+  fill: black;
+}
+
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    right: 15px;
+    bottom: 15px;
+    padding: 8px;
+  }
+}

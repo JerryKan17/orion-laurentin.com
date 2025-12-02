@@ -1,0 +1,50 @@
+.showreel-container{
+  z-index: 50;
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+}
+
+.showreel-video-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+  overflow: hidden;
+  background-color: black;
+}
+
+.showreel-video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+
+  object-fit: cover; 
+  
+  z-index: 1;
+}
+
+.showreel-button{
+  position: relative;
+  z-index: 40 ;
+  background-color: rgba(0, 0, 0, 0.733);
+}
+

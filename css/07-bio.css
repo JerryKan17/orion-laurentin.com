@@ -1,0 +1,139 @@
+/* --- CONTENEUR PRINCIPAL --- */
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color); /* Fond blanc */
+  padding: 80px 20px; /* Espace interne aéré */
+  overflow: hidden; /* Évite les dépassements */
+}
+
+/* Typographie globale de la section */
+.bio-container p {
+  color: #1a1a1a; /* Noir doux, moins agressif que le pur noir */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.bio-container .text-title {
+  color: black;
+  font-size: 60px; /* Taille ajustée pour être propre */
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* --- SECTION DU HAUT : TEXTE + PHOTO --- */
+.bio-text-photo {
+  display: flex;
+  flex-direction: column-reverse; /* Mobile : Photo en haut, Texte en bas (ou l'inverse selon préférence) */
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px; /* Largeur max pour ne pas étirer sur les écrans géants */
+  margin: 0 auto 80px auto; /* Centré horizontalement */
+}
+
+/* Le bloc texte */
+.bio-text {
+  width: 100%;
+}
+
+/* Le bloc photo */
+.bio-photo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bio-photo img {
+  width: 100%;
+  max-width: 450px; /* Taille maximale de l'image */
+  height: auto; /* Ratio conservé */
+  border-radius: 12px;
+  box-shadow: 20px 20px 0px var(--secondary-color); /* Effet graphique décalé (ton jaune) */
+  object-fit: cover;
+}
+
+/* --- SECTION DU BAS : AVIS CLIENTS --- */
+.bio-avis {
+  display: flex;
+  flex-direction: column; /* Les cartes l'une sous l'autre sur mobile */
+  gap: 30px;
+  max-width: 1200px; /* Ajusté pour être cohérent avec le haut */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* La Carte Globale */
+.bio-avis-client {
+  display: flex;
+  flex-direction: column; /* Important : On empile le Header puis le Texte */
+  background-color: #f4f4f4;
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 5px solid black; /* La barre noire à gauche */
+  height: auto;
+  flex: 1; 
+}
+
+/* L'en-tête (Image + Nom) */
+.client-header {
+  display: flex;
+  align-items: center; /* Centre verticalement l'image et le nom */
+  gap: 20px; /* Espace entre image et nom */
+  margin-bottom: 20px; /* Espace entre l'en-tête et le paragraphe */
+}
+
+/* L'image ronde (Avatar) */
+.client-avatar {
+  width: 70px; /* Taille fixe pour être rond */
+  height: 70px;
+  border-radius: 50%; /* C'est ça qui fait le rond parfait */
+  object-fit: cover; /* L'image ne s'écrase pas */
+}
+
+/* Le Nom */
+.client-name {
+  font-family: effra-cc, sans-serif, Arial, Helvetica, sans-serif; /* Ta police titre */
+  font-weight: 700;
+  font-size: 28px; /* Ajusté pour être équilibré */
+  color: #000;
+  line-height: 1.1;
+}
+
+/* Le Texte */
+.client-content p {
+  font-family: "eb-garamond", serif, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0; /* Reset des marges du p */
+}
+  
+
+/* --- MEDIA QUERIES (VERSION ORDINATEUR) --- */
+@media (min-width: 900px) {
+  
+  .bio-text-photo {
+    flex-direction: row; /* On remet côte à côte */
+    align-items: flex-start; /* Calé en haut */
+    gap: 80px;
+  }
+
+  .bio-text {
+    flex: 1; /* Prend l'espace disponible */
+    text-align: justify; /* Justifié seulement sur grand écran */
+  }
+  
+  .bio-photo {
+    flex: 1;
+    justify-content: flex-end; /* Pousse la photo vers la droite */
+  }
+
+  .bio-container .text-title {
+    font-size: 100px; /* Titre plus gros sur PC */
+  }
+
+  /* Les avis passent en ligne sur PC */
+  .bio-avis {
+      flex-direction: row; 
+    }
+}
