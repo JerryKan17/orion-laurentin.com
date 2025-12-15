@@ -97,11 +97,11 @@
 @media (max-width: 768px) {
   
   .contact-container {
-    min-height: 90vh; /* Plus grand sur mobile pour l'effet immersif */
+    min-height: 90vh; 
   }
 
   .contact-content .text-title {
-    font-size: 60px; /* Un peu plus petit sur mobile */
+    font-size: 60px; 
   }
 
   .social-list {

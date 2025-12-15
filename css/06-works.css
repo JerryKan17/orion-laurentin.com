@@ -115,3 +115,83 @@
   .work-overlay h3 { font-size: 28px; }
   .work-overlay p { font-size: 16px; }
 }
+
+/* --- FILTRES (ONGLETS) --- */
+.works-filters {
+  display: flex;
+  flex-wrap: wrap; /* Passe à la ligne sur mobile */
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 60px; /* Espace avant les cartes */
+  margin-top: -20px; /* Remonte un peu vers le titre */
+  z-index: 50;
+}
+
+/* Style spécifique des boutons de filtre */
+.filter-btn {
+  background-color: transparent;
+  color: white; /* Blanc par défaut */
+  border: 1px solid white; /* Bordure fine blanche */
+  padding: 10px 25px;
+  font-family: effra-cc, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50px; /* Arrondi style "pill" */
+}
+
+/* Survol */
+.filter-btn:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+/* État ACTIF (bouton sélectionné) */
+.filter-btn.active {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: black; /* Texte noir sur fond jaune */
+  font-weight: 600;
+}
+
+
+/* --- GESTION DE L'AFFICHAGE DES CATÉGORIES --- */
+
+.works-category {
+  display: none; /* Caché par défaut */
+  width: 100%;
+  
+  /* Petite animation d'apparition */
+  animation: fadeInWorks 0.5s ease-in-out;
+}
+
+/* La classe qui rend visible */
+.works-category.active {
+  display: block;
+}
+
+/* Keyframes pour l'animation douce */
+@keyframes fadeInWorks {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive pour les boutons */
+@media (max-width: 768px) {
+  .works-filters {
+    gap: 10px;
+  }
+  .filter-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

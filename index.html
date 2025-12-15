@@ -69,115 +69,169 @@
     </header>   
 
     <!--HOME (showreel)-->
-    <section id="home" class="showreel-container">
+    <section id="home" class="showreel-container home-showreel" data-video-id="1146512069">
    
       <div class="showreel-video-background">
-        <video id="js-showreel-video" src="assets/showreel.mp4" 
+        <video id="js-showreel-video" src="assets/loop_preview.mp4" 
         autoplay muted loop playsinline>
         </video>
       </div>
 
       <div class="showreel-button">
-        <button id="js-fullscreen-button">view fullscreen</button>
+        <button id="js-fullscreen-button" class="open-showreel">view fullscreen</button>
       </div>
       
     </section>
 
+    <div class="showreel-overlay" id="showreel-overlay">
+      <button class="close-showreel">×</button>
+      <div class="showreel-video-container">
+      </div>
+    </div>
+
     <!--Works-->
-    <section id="works"class="works-section">
-      <div><p class="text-title no-select">works</p></div>
+    <section class="works-section" id="works">
+  
+  <div><p class="text-title no-select">works</p></div>
 
-      <!--workline1-->
-      <div class="works-line">
+  <div class="works-filters">
+    <button class="filter-btn active" data-target="film-scoring">Film Scoring</button>
+    <button class="filter-btn" data-target="video-games">Video Games</button>
+    <button class="filter-btn" data-target="advertising">Advertising / Sound Design</button>
+  </div>
 
-        <div class="work-card">
-          <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=G1EtdmbXiLM">
-            
-            <img src="assets/Affiches Projets/Affiche_derealisation.png" alt="Projet Derealisation" loading="lazy">
-            
-            <div class="work-overlay">
-              <h3>DERE∀LISATION - by Panoply</h3>
-              <p>
-                  Full Sonic Immersion: Complete sound design and rescore for a Panoply short film, deeply exploring the psychological phenomenon of derealization through immersive audio and atmosphere.
-              </p>
-              <span class="overlay-btn">view</span>
-            </div>
-
-          </a>
-        </div>
-
-        <div class="work-card">
-          <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=kCK8Z2fESJs">
-            <img src="assets/Affiches Projets/Affiche_Druck.png" alt="Projet Druck">
-            <div class="work-overlay" loading="lazy">
-                <h3>Druck</h3>
-                <p>Tension & Suspense: Creation of the original score and for Gabriel Fournier's mute short film. The music  was essential to build psychological tension and underscore the mounting hesitation during a planned convenience store robbery.</p>
-                <span class="overlay-btn">view</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="work-card">
-          <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=u8L5SQmXoUY">
-            <img src="assets/Affiches Projets/Affiche_Gojo.png" alt="Projet Gojo" loading="lazy">
-            <div class="work-overlay">
-                <h3>Gojo vs Toji</h3>
-                <p>Complete resound design and original music score for the famous Gojo Satoru vs. Toji Fushiguro fight sequence. The entire sonic landscape (SFX and score) was rebuilt from scratch, preserving only the original dialogue.</p>
-                <span class="overlay-btn">view</span>
-            </div>
-          </a>
-        </div>
-
+  <div class="works-category active" id="film-scoring"><!-- FILM SCORING-->
+    
+    <div class="works-line"> <!--Workline #1-->
+      <div class="work-card"> <!--Derealisation-->
+        <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=G1EtdmbXiLM">
+          <img src="assets/Affiches Projets/Affiche_derealisation.png" alt="Projet Derealisation" loading="lazy">
+          <div class="work-overlay">
+            <h3>DERE∀LISATION</h3>
+            <p>Full Sonic Immersion: Complete sound design and rescore for a Panoply short film, deeply exploring the psychological phenomenon of derealization through immersive audio and atmosphere.</p>
+            <span class="overlay-btn">view</span>
+          </div>
+        </a>
       </div>
 
-      <!--workline2-->
-      <div class="works-line">
+      <div class="work-card"> <!--Druk-->
+        <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=kCK8Z2fESJs">
+          <img src="assets/Affiches Projets/Affiche_Druck.png" alt="Projet Druck" loading="lazy">
+          <div class="work-overlay">
+            <h3>Druck Project</h3>
+            <p>Tension & Suspense: Creation of the original score and for Gabriel Fournier's mute short film. The music  was essential to build psychological tension and underscore the mounting hesitation during a planned convenience store robbery.</p>
+            <span class="overlay-btn">view</span>
+          </div>
+        </a>
+      </div>
 
-        <div class="work-card">
-          <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=e2P4qkNQ2ws">
-            
+      <div class="work-card"> <!--Gojo vs Toji-->
+        <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=u8L5SQmXoUY">
+          <img src="assets/Affiches Projets/Affiche_Gojo.png" alt="Projet Gojo" loading="lazy">
+          <div class="work-overlay">
+              <h3>Gojo vs Toji</h3>
+              <p>Iconic Battle Overhaul: Complete Resound Design.</p>
+              <span class="overlay-btn">view</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="works-line">  <!--Workline #2-->
+       <div class="work-card"><!--MOTH-->
+          <a class="work-link" target="_blank" href="#">
             <img src="assets/Affiches Projets/Affiche_Moth.png" alt="Projet MOTH" loading="lazy">
-            
             <div class="work-overlay">
-              <h3>MOTH by Mackenzie Sheppard</h3>
-              <p>
-                  Composition and complete soundscape reconstruction for the short film Moth, developed as an electroacoustic project under the guidance of Professor Thierry Gauthier. A deep exercise in ambient and experimental sound design.
-              </p>
+              <h3>Moth</h3>
+              <p>Electroacoustic Score & Soundscape.</p>
               <span class="overlay-btn">view</span>
             </div>
-
           </a>
         </div>
-
-        <div class="work-card">
-          <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=kCK8Z2fESJs">
+        
+        <div class="work-card"><!--ISNH-->
+          <a class="work-link" target="_blank" href="#">
             <img src="assets/Affiches Projets/Affiche_ISNH.png" alt="Projet ISNH" loading="lazy">
             <div class="work-overlay">
-                <h3>I Shall Note Hate</h3>
-                <p>
-                  Contribution to the original soundtrack for Tal Barda's documentary, I Shall Not Hate, alongside renowned composer Robert Marcel Lepage. Elements of my composition, developed during my studies, were integrated into the final film score.
-                </p>
+                <h3>I Shall Not Hate</h3>
+                <p>Scoring Collaboration with Robert Marcel Lepage.</p>
                 <span class="overlay-btn">view</span>
             </div>
           </a>
         </div>
 
-        <div class="work-card">
-          <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=u8L5SQmXoUY">
-            <img src="assets/Affiches Projets/Affiche_Wyntale.png" alt="Projet Gojo" loading="lazy">
+        <div class="work-card"><!--Wyntale-->
+          <a class="work-link" target="_blank" href="#">
+            <img src="assets/Affiches Projets/Affiche_Wyntale.png" alt="Projet Wynatle" loading="lazy">
             <div class="work-overlay">
-                <h3>Wynatle</h3>
-                <p>
-                  Original music score composed specifically for the Wynatle server trailer. The soundtrack was designed to enhance the visual illustrations and establish the deep lore and atmosphere of the Minecraft minigame server.
-                </p>
+                <h3>The Story of Wyntale</h3>
+                <p>Narrative Game Scoring for a Minecraft Server.</p>
                 <span class="overlay-btn">view</span>
             </div>
           </a>
-        </div>
+      </div>
+    </div>
 
+  </div> 
+
+  <div class="works-category" id="video-games"> <!--VGM-->
+
+    <div class="works-line"><!--Workline #1-->
+      <div class="work-card"> <!--RENAISSANCE-->
+          <a class="work-link" target="_blank" href="">
+            <img src="assets/Affiches Projets/Affiche_JV_Renaissance.png" alt="Projet Wynatle" loading="lazy">
+            <div class="work-overlay">
+                <h3>Renaissance</h3>
+                <p>Audio Director on upcoming Pokémon Fangame.</p>
+                <span class="overlay-btn">coming soon</span>
+            </div>
+          </a>
       </div>
 
-    </section>
+      <div class="work-card">
+        <a class="work-link" target="_blank" href="https://pkmnpr.bandcamp.com/album/phoenix-rising-episode-1-soundtrack">
+          <img src="assets/Affiches Projets/Affiche_JV_Phoenix Rising.png" alt="Placeholder Game" loading="lazy">
+          <div class="work-overlay">
+            <h3>Phoenix Rising</h3>
+            <p>Phoenix Rising, a fan made Episodic adventure. Demo Release Date: May 25th | For Windows PC</p>
+            <span class="overlay-btn">view</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="works-category" id="advertising"> <!--ADS-->
+
+    <div class="works-line"> <!--Workline #1-->
+      <div class="work-card">  <!--SHOWREEL-->
+        <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=u8L5SQmXoUY">
+          <img src="assets/Affiches Projets/Affiche_Gojo.png" alt="Projet Showreel" loading="lazy">
+          <div class="work-overlay">
+              <h3>Showreel 2026</h3>
+              <p>comprehensive collection demonstrating skills in sound design, mixing, and original scoring across various media. Highlighting adaptability for cinematic trailers, videogame music, film scoring and commercial audio branding.</p>
+              <span class="overlay-btn">view</span>
+          </div>
+        </a>
+      </div>
+
+       <div class="work-card"> <!--Derealisation-->
+        <a class="work-link" target="_blank" href="https://www.youtube.com/watch?v=G1EtdmbXiLM">
+          <img src="assets/Affiches Projets/Affiche_derealisation.png" alt="Projet Derealisation" loading="lazy">
+          <div class="work-overlay">
+            <h3>DERE∀LISATION</h3>
+            <p>Full Sonic Immersion: Complete sound design and rescore for a Panoply short film, deeply exploring the psychological phenomenon of derealization through immersive audio and atmosphere.</p>
+            <span class="overlay-btn">view</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
 
     <!--Bio-->
     <article id="bio" class="bio-container">
