@@ -16,7 +16,7 @@ body{
 }
 
 
-p, button, nav ul li a, footer {
+p, button, nav ul li a, footer, h2 {
   font-family: "eb-garamond", serif, 'Times New Roman', Times, serif;
   font-size: 24px; 
   font-weight: 400;
