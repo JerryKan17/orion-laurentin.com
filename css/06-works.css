@@ -60,7 +60,7 @@
 .work-overlay h3 {
   font-family: effra-cc, sans-serif, Arial, Helvetica, sans-serif;
   font-size: 38px;
-  color: white;
+  color: var(--main-color);
   margin-bottom: 20px;
   font-weight: 500;
 }

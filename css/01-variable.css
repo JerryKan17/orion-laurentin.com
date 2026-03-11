@@ -1,7 +1,7 @@
 
 /*main color variable*/
 :root {
-  --main-color: rgb(255, 255, 255);
+  --main-color: #FFF7DD;
   --background-color: rgb(4, 0, 35); 
   --secondary-color: rgb(255, 249, 81);
   --active-color: rgb(255, 29, 240);
@@ -21,7 +21,7 @@ p, button, nav ul li a, footer, h2 {
   font-size: 24px; 
   font-weight: 400;
   font-style: normal;;
-  color: white;
+  color: #FFF7DD;;
 }
 
 /*base button style*/

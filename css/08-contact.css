@@ -52,13 +52,13 @@
 .contact-content .text-title {
   font-size: 80px; 
   margin: 0;
-  color: white;
+  color: var(--main-color);
 }
 
 /* Email */
 .contact-email {
   font-size: 24px;
-  color: white;
+  color: var(--main-color);
   text-decoration: none;
   margin-bottom: 20px;
   transition: color 0.2s ease;
@@ -83,7 +83,7 @@
 .social-icon svg {
   width: 45px;
   height: 45px;
-  fill: white;
+  fill: var(--main-color);
   transition: transform 0.2s ease, fill 0.2s ease;
 }
 
